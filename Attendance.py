@@ -4,6 +4,7 @@ import face_recognition
 import os
 from datetime import datetime
 
+
 path = 'ImageAttendence'
 images = []
 classNames = []
@@ -73,7 +74,16 @@ while True:
     cv2.imshow('Webcam',img)
     cv2.waitKey(1)
 
+    # close the web cam using Ese key
 
+    k = cv2.waitKey(1)
+    if k % 256 == 27:
+        # ESC pressed
+        print("Escape hit, closing...")
+        cap.release()
+        cv2.destroyAllWindows()
+        break
+    # end close web cam
 
 
 

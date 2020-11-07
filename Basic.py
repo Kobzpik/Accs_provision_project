@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import face_recognition
 
+
 imgElon = face_recognition.load_image_file('ImageBasic/elon-musk.jpg')
 imgElon = cv2.cvtColor(imgElon,cv2.COLOR_BGR2RGB)
 imgBill = face_recognition.load_image_file('ImageBasic/bill-gates.jpg')
